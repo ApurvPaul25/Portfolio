@@ -1,0 +1,6 @@
+*{
+    background-color: black;
+    display: flexbox;
+    align-items: center;
+    align-content:space-evenly;
+}
