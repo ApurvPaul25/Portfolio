@@ -1,0 +1,113 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #333;
+  color: white;
+  padding: 40px 60px;
+  flex-wrap: wrap; 
+  gap: 30px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  flex-direction: column;
+  
+}
+
+.footer-left h2 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+.footer-right {
+  flex: 0.3;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-right h3 {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.footer-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start; 
+  width: 100%;
+}
+
+.footer-right input,
+.footer-right textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: #444;
+  color: white;
+  transition: border 0.3s ease;
+}
+
+.footer-right input::placeholder,
+.footer-right textarea::placeholder {
+  color: #ccc;
+}
+
+
+.footer-right input:hover,
+.footer-right input:focus,
+.footer-right textarea:hover,
+.footer-right textarea:focus {
+  border: 2px solid #ffcc00;
+  outline: none;
+}
+
+.footer-right button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.footer-right button:hover {
+  background-color: #e6b800;
+}
+
+.back-to-top {
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #e6b800;
+}

@@ -1,0 +1,45 @@
+.hero {
+  height: 80vh;
+  background-color: #b99506;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px; /* space between buttons and cards */
+}
+
+.color-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: 0.2s ease-in-out;
+}
+
+.color-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}

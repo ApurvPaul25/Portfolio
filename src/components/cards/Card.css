@@ -1,0 +1,19 @@
+.card{
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    background-color: slategray;
+    border-radius: 10px;
+}
+
+.productImg{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h2,
+.card p,
+.card h3 {
+  background-color: slategray;
+}

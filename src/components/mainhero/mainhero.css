@@ -1,0 +1,29 @@
+.mainhero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+font-size: 50vmin; 
+font-weight: 900;
+height: 100%;
+display: flex;            
+justify-content: center;   
+align-items: center;       
+text-align: center; 
+background-color: black;
+user-select: none;
+mix-blend-mode: multiply;
+}
+
+.text-view{
+  color: white;
+}

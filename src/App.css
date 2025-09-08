@@ -1,0 +1,16 @@
+*{
+    background-color: transparent;
+    display: flexbox;
+    align-items: center;
+    align-content:space-evenly;
+}
+
+.card-container {
+  display: flex;
+  width: 100%;           
+  gap: 20px;               
+  justify-content: center;
+  flex-wrap: wrap;        
+  padding: 20px;
+}
+
