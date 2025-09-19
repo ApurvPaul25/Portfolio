@@ -5,7 +5,7 @@ import heroVideo from '../../assets/heroVideo.mp4'
 
 export const Mainhero = () => {
 
-  const text = "Kayden"
+  const text = "KAYDENCAT"
 
   const fonts = [
   "Merriweather",

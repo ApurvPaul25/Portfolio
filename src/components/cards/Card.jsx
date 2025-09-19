@@ -1,15 +1,13 @@
-import React from 'react'
-import './Card.css'
+import React from "react";
 
-const Card = (props) => {
+export default function Card({ srcimg, title, description, textColor }) {
   return (
-    <div className="card">
-        <img src={props.img} className='productImg' alt="the image" />
-        <h2>{props.ttl}</h2>
-        <p>{props.des}</p>
-        <h3>{props.price}</h3>
+    <div
+      className={`rounded-b-4xl bg-gray-50 shadow-sm px-4 pt-4 flex flex-col  hover:shadow-lg transition w-full sm:w-[48%] lg:w-[18%] ${textColor}`}
+    >
+       {srcimg && <img className="rounded-t-4xl" src={srcimg} alt={title} />} 
+      <h2 className="text-left text-xl font-semibold pt-2 pb-1">{title}</h2>
+      <p className="text-sm text-gray-700 pb-10">{description}</p>
     </div>
-  )
+  );
 }
-
-export default Card
