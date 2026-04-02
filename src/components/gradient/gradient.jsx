@@ -5,10 +5,25 @@ export default function Gradient() {
   return (
    <div className="body">
     <div className="container">
-    <div className="m">
-      <span>A</span>
+      <div className="m">
+        <span>A</span>
+      </div>
     </div>
-   </div>
+    <div className="container">
+      <div className="m">
+        <span>A</span>
+      </div>
+    </div>
+    <div className="container">
+      <div className="m">
+        <span>A</span>
+      </div>
+    </div>
+    <div className="container">
+      <div className="m">
+        <span>A</span>
+      </div>
+    </div>
    </div>
   )
 }
