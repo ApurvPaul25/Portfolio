@@ -1,16 +1,19 @@
-/* *{
-    background-color: transparent;
-    display: flexbox;
-    align-items: center;
-    align-content:space-evenly;
-} */
-
-/* .card-container {
+.app-wrapper{
+  min-height: 100vh;
+  background: linear-gradient(to left, #030712, #1f2937);
   display: flex;
-  width: 100%;           
-  gap: 20px;               
   justify-content: center;
-  flex-wrap: wrap;        
-  padding: 20px;
-} */
+}
 
+.app-container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 16px;
+  background-color: linear-gradient(
+    to left,
+    #030712,  
+    #1f2937   
+  );
+  padding: 24px;
+  box-sizing: border-box;
+}
