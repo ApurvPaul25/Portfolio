@@ -1,0 +1,76 @@
+.app-wrapper{
+  min-height: 100vh;
+  background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    linear-gradient(to left, #FFCC00 0%, #030712 30%, #A42C12 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.app-wrapper::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url(/src/assets/noise.png);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 16px;
+  background-color: linear-gradient(
+    to left,
+    #FFCC00 0%, #030712 30%, #A42C12 100%   
+  );
+  padding: 24px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; 
+}
+
+.popup-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #1a1a1a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.primary-btn {
+  background: #646cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.close-btn {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

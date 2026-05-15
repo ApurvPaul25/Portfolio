@@ -1,0 +1,91 @@
+/* .navbar {
+  background-color: rgb(59, 59, 59);
+  max-width: 140rem;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 0.5fr, 1fr;
+  align-items: center;
+}
+
+.logo {
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo:hover {
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffcc00;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3.2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+} */
+
+
+.navbar{
+margin: auto;
+width: 100%;
+max-width: 140rem;
+backdrop-filter: blur(24px);
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+flex-direction: row;
+padding: 10px;
+border-radius: 30px;
+}
+
+.logo {
+  justify-content: end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 30px;
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  cursor: pointer;
+  color: #ffff;
+  border: 2px solid #ffcc00;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+} 

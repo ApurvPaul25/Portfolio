@@ -1,0 +1,46 @@
+
+.gal-box{
+    background-color: #a3a3a180;
+    border-radius: 20px;
+    box-shadow:
+    inset 0px -4px 10px rgba(0, 0, 0, 0.35),
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    0 25px 60px rgba(0, 0, 0, 0.25),
+    0 0 60px rgba(234, 66, 101, 0.25),
+    -4px -4px 10px rgba(234, 66, 101, 0.08);
+
+    /* inset 4px 4px 10px rgba(0, 0, 0, 0.35),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.08),
+    0 6px 15px rgba(115, 70, 152, 0.25),
+    0 20px 40px rgba(115, 70, 152, 0.15),
+    0 0 80px rgba(115, 70, 152, 0.10); */
+}
+
+.gal-grid-container{
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    grid-template-areas: 
+    "box-1 box-2 box-3 box-3"
+    "box-1 box-4 box-4 box-5";
+}
+
+@media (max-width: 56em) {
+    .gal-grid-container{
+        grid-template-areas: 
+        "box-1 box-1 box-2"
+        "box-1 box-1 box-3"
+        "box-4 box-5 box-5"
+    }
+}
+
+@media (max-width: 42em) {
+    .gal-grid-container{
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-3 box-2"
+        "box-3 box-5"
+    }
+}
+

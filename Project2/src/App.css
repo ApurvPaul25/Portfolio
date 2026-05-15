@@ -1,0 +1,92 @@
+body{
+  margin: 0;
+}
+
+.wrapper{
+  margin: 0;
+  width: 100%;
+  background: #490a62;
+  min-height: 100dvh;
+}
+
+.nav{
+  position: sticky;
+}
+
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  display: block;
+}
+
+.page{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border-top: 8px solid rgba(227, 217, 201);
+
+  border-left: 1px solid #dddddd62;
+  border-bottom: 1px solid #dddddd62;
+
+  border-top-right-radius: 20px;
+  border-top-left-radius:  20px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#page-1{background-color: #99B7F5; margin-top: 200px;}
+#page-2{background-color: #267F53;}
+#page-3{background-color: #F5793B;}
+#page-4{background-color: #F296BD;}
+#page-5{background-color: #FCCA59;}
+
+
+.h-scroll-wrapper {
+  height: 400vh; 
+  position: relative;
+}
+
+#page-3 {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 4rem;
+  padding: 0 10vw;
+  will-change: transform; 
+}
+
+.h-card {
+  flex-shrink: 0; 
+  width: 30vw;
+  height: 80vh;
+  color: wheat;
+  background: rgba(255, 255, 255, 0.1);
+  border: 4px solid rgb(227, 217, 201);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+}
+
+#card-1{background-color: #191221;}
+#card-2{background-color: #44305a;}
+#card-3{background-color: #734f96;}
+#card-4{background-color: #9a6bca;}
+#card-5{background-color: #c39aec;}
