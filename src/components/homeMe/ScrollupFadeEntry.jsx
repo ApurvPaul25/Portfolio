@@ -1,4 +1,4 @@
-import './scrollupFadeEntry.css'
+import './ScrollupFadeEntry.css'
 import avatar from "../../assets/avatar.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, 
