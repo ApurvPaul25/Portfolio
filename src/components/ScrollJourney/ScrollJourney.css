@@ -1,0 +1,270 @@
+/* =========================================================
+   MAIN SCROLL JOURNEY
+========================================================= */
+
+.scroll-journey {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #267f53;
+}
+
+
+/* =========================================================
+   STICKY VIEWPORT
+========================================================= */
+
+.journey-wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #267f53;
+}
+
+.journey-heading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.journey-heading h1 {
+  margin: 0;
+  color: wheat;
+  opacity: 1;
+  font-size: clamp(4rem, 12vw, 16rem);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Fade heading as the journey section scrolls away */
+@supports (animation-timeline: view()) {
+  .scroll-journey {
+    view-timeline-name: --journey-view;
+    view-timeline-axis: block;
+  }
+
+  .journey-heading h1 {
+    animation: journeyHeadingFade linear both;
+    animation-timeline: --journey-view;
+    animation-range: entry 5% exit 50%;
+  }
+
+  @keyframes journeyHeadingFade {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+.visual-area {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.visual-area svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   SVG PATH
+========================================================= */
+
+.visual-area svg path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 120;
+}
+
+.journey-elements {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.node-circle {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: #267f53;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+}
+
+.node-content {
+  position: absolute;
+  width: clamp(220px, 28vw, 450px);
+  transform: translate(var(--offset-x), var(--offset-y));
+  pointer-events: none;
+  z-index: 20;
+  text-align: var(--text-align, left);
+  transition: opacity 0.7s ease, filter 0.7s ease;
+}
+.active-content {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.previous-content {
+  opacity: 0.6;
+  filter: blur(0.2px);
+}
+
+.node-content.right {
+  left: calc(100% + 20px);
+  top: 50%;
+  transform: translate(var(--offset-x), calc(-50% + var(--offset-y)));
+}
+
+.node-content.left {
+  right: calc(100% + 20px);
+  top: 50%;
+  transform: translate(var(--offset-x), calc(-50% + var(--offset-y)));
+}
+
+.journey-node {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0.75);
+  opacity: 1;
+  z-index: 5;
+
+  transition: transform 0.5s ease;
+}
+
+.journey-node.active {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+/* =========================================================
+   TITLES
+========================================================= */
+
+.journey-title {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: clamp(28px, 3.5vw, 64px);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.desc {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  color: white;
+}
+
+.desc p {
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 20px);
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SCROLL TRIGGERS
+========================================================= */
+
+.scroll-triggers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+.scroll-trigger {
+  width: 100%;
+  height: 100vh;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .node-circle {
+    width: 58px;
+    height: 58px;
+    font-size: 16px;
+  }
+
+  .node-content {
+    width: clamp(200px, 40vw, 320px);
+  }
+
+  .journey-title {
+    font-size: clamp(32px, 8vw, 64px);
+  }
+
+  .desc p {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .node-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .node-content {
+    width: min(75vw, 300px);
+    bottom: calc(100% + 18px);
+  }
+
+  .journey-title {
+    font-size: clamp(28px, 10vw, 48px);
+    margin-bottom: 8px;
+  }
+
+  .desc p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+}
