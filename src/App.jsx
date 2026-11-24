@@ -8,7 +8,7 @@ import { ScrollJourney } from './components/ScrollJourney/ScrollJourney';
 import  HowIBuild  from './components/HowIBuild/HowIBuild'
 import { DescCard, cardData } from './components/descCard/DescCard';
 import car from "./assets/minecraftnobg2.png"
-import ScrollUpFadeEntry from './components/homeMe/scrollupFadeEntry';
+import ScrollUpFadeEntry from './components/homeMe/ScrollupFadeEntry';
 
 
 
