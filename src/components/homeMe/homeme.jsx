@@ -17,7 +17,7 @@ import { faGithub,
     } 
     from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import Code from '../../rough/Code';
+import Code from "../../rough/code.jsx";
 import GoldCoinLoader from '../CoinLoader/GoldCoinLoader';
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
